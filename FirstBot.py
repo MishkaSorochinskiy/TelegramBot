@@ -8,7 +8,7 @@ bot = telebot.TeleBot("702425430:AAGLU8_6u0sSor3Wk9eb64IT-6EYuVvmqnA")
 players={}
 current_date=0
 
-def sorted_players(players:list)->list:
+def sorted_players(players:dict)->list:
     new_list=[]
     for i in players.keys():
         new_list.append([get_avarage(players[i][2],players[i][3]),i])
