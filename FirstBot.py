@@ -63,8 +63,6 @@ def get_percentage(message:Message):
 	else:
 		bot.reply_to(message,"Sorry, you have already played today!!")
 
-@bot.message_handler(func=StasWrote)
-def answer(message):
-	bot.reply_to(message, random.choice(repToStas))
+
 
 bot.polling(none_stop=True, interval=0)
