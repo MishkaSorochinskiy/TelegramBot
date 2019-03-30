@@ -1,7 +1,7 @@
 import telebot
 from telebot.types import Message
 from datetime import datetime
-import random
+from random import randint
 
 bot = telebot.TeleBot("702425430:AAGLU8_6u0sSor3Wk9eb64IT-6EYuVvmqnA")
 
@@ -56,7 +56,7 @@ def get_percentage(message:Message):
 			players[i][4]=True
 	if players[message.json['from']['id']][4]==True:
 		players[message.json['from']['id']][4]=False
-		value=random.randint(0,100)
+		value=randint(0,100)
 		bot.reply_to(message,"{0} % - you are Мох today".format(str(value)))
 		players[message.json['from']['id']][2]+=1
 		players[message.json['from']['id']][3]+=value
