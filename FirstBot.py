@@ -1,6 +1,6 @@
 import telebot
 from telebot.types import Message
-from datetime import datetime
+from datetime import *
 from random import randint
 
 bot = telebot.TeleBot("702425430:AAGLU8_6u0sSor3Wk9eb64IT-6EYuVvmqnA")
@@ -50,8 +50,8 @@ def get_percentage(message:Message):
 	if message.json['from']['id'] not in players.keys():
 		bot.reply_to(message,"Who are you?? You did not register")
 		return 
-	if datetime.fromtimestamp(message.json['date']).day!=current_date:
-		current_date=datetime.fromtimestamp(message.json['date']).day
+	if fromtimestamp(message.json['date']).day!=current_date:
+		current_date=fromtimestamp(message.json['date']).day
 		for i in players.keys():
 			players[i][4]=True
 	if players[message.json['from']['id']][4]==True:
