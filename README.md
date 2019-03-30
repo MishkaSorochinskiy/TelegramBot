@@ -1,3 +1,2 @@
 # TelegramBot
-First repository
-The repository holds python code for PythonBot
+My first repository that holds python code for PythonBot
